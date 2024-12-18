@@ -1,12 +1,18 @@
 import React from "react"
-import User from "./components/User"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+// import User from "./components/User"
+import Register from "./components/Register"
+import Login from "./components/Login"
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Redux Saga Example</h1>
-      <User/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        {/* <Route path="/user" element={<User />} /> */}
+      </Routes>
+    </BrowserRouter>
   )
 }
 
